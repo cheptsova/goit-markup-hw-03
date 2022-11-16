@@ -11,9 +11,9 @@
      0px 2px 2px rgba(0, 0, 0, 0.12);
     --card-set-gap: 30px;
 }
-
-html { 
-    box -sizing: border-box; } 
+html{
+    box-sizing: border-box;
+}
     *, 
     *::before, 
     *::after { 
@@ -57,6 +57,12 @@ ul{
     margin: 0;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .hidden{
     position: absolute;
     width: 1px;
@@ -76,7 +82,6 @@ ul{
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid tomato;
 }
 /* Колір основного тексту #FFFFFF */
 /* додаткові кольори тексту #212121  #757575*/
@@ -215,7 +220,7 @@ text-align: center;
 }
 .feature-ul{
     display: flex;
-    margin-top: 94px;
+    padding-top: 94px;
 }
 .feature-li{
   max-width: 270px;  
