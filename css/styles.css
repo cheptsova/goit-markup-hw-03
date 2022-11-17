@@ -15,11 +15,10 @@
 html{
     box-sizing: border-box;
 }
-    *, 
-    *::before, 
-    *::after { 
-    box-sizing: inherit; } 
 
+*{
+    box-sizing: inherit;
+}
 body{
     background-color: var(--primary-text-color);
     color:var(--content-text-color);
@@ -102,8 +101,8 @@ header .logo-link{
 
     display: inline-block;
     text-decoration: none;
-    margin-top: 24px;
-    margin-bottom: 25px;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 header .logo {
@@ -205,7 +204,8 @@ padding: 200px 452px;
 }
 
 .hero-btn{
-color: var(--btn-color);
+color: var(--primary-text-color);
+background-color: var(--hero-bcg-color);
 cursor: pointer;
 font-family: 'Roboto', sans-serif;
 font-weight: 700;
@@ -258,9 +258,6 @@ border: none;
 }
 
 /* Work list */
-.work-image{
-    
-}
 
 .list-image{
     display: flex;
@@ -291,17 +288,14 @@ border: none;
 .lists{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 0;
     margin-top: 50px;
-    margin-left: calc(-1 * var(--card-set-gap));
 }
 .team-worker:first-child{
     margin-left: 0;
 }
 .team-worker{
-    flex-basis: calc(100% / 4 -
-    var(--card-set-gap));
+    flex-basis: calc((100% - 3 * var(--card-set-gap)) / 4);
     margin-left: var(--card-set-gap);
     background: var(--primary-text-color);
     box-shadow: var(--btn-shadow);
@@ -365,12 +359,9 @@ border: none;
 .footer-address{
     color: var(--primary-text-color);
 
-    padding-bottom: 12px;
 }
 .footer-mail{
 color: rgba(255, 255, 255, 0.6);
-
-padding-bottom: 12px;
 }
 .footer-tel{
     color: rgba(255, 255, 255, 0.6);
@@ -381,6 +372,9 @@ padding-bottom: 12px;
     font-size: 14px;
     line-height: 1.71;
     font-style: normal;
+}
+.contact-list:not(:last-child){
+    padding-bottom: 12px;
 }
 .footer-address:hover, .footer-address:focus,
 .footer-mail:hover, .footer-mail:focus,
@@ -438,15 +432,11 @@ padding-bottom: 94px;
         flex-wrap: wrap;
         padding: 0;
         margin: 0;
-        margin-top:calc(-1 * var(--card-set-gap)) ;
-        margin-left:calc(-1 * var(--card-set-gap)) ;
-}
+        gap: var(--card-set-gap);
     
-    
+    }
     .holder > .portofolio-list{
-        margin-left: var(--card-set-gap);
-        margin-top: var(--card-set-gap); 
-        flex-basis: calc(100% / 3 - var(--card-set-gap));  
+        flex-basis: calc((100% - 2 * 30px) / 3);  
     }
 
     .card-content{
