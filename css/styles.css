@@ -10,6 +10,7 @@
     0px 1px 2px rgba(0, 0, 0, 0.08),
      0px 2px 2px rgba(0, 0, 0, 0.12);
     --card-set-gap: 30px;
+    --border-color:#ECECEC;
 }
 html{
     box-sizing: border-box;
@@ -89,6 +90,9 @@ img{
 /* акцент #2196F3 */
 
 /* Logo */
+.header{
+    border-bottom: 1px solid var(--border-color);
+}
 header .logo-link{
     color: var(--tittle-text-color);
     font-family: 'Raleway', sans-serif;
@@ -108,7 +112,6 @@ header .logo {
 /* Навігація сайту */
 .mainer{
     display: flex;
-    border-bottom: 1px solid #ECECEC;
 }
 .navigation{
     display: flex;
@@ -120,8 +123,7 @@ header .logo {
 
 }
 .header-list{
-    padding-top: 32px;
-    padding-bottom: 32px;
+    
 }
 .header-list:first-child{
     margin-left: 93px;
@@ -130,6 +132,9 @@ header .logo {
     margin-left: 50px;
 }
 .header-nav .link{
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--tittle-text-color);
     letter-spacing: 0.02em;
     font-weight: 500;
@@ -145,14 +150,16 @@ link:not(:first-child){
     color: var(--accent-color);
 }
 
-.contact-info{ 
+.contact-info{
+    display: flex;
+    
     text-decoration: none;
     display: flex;
     margin-left: auto;
     align-items: center;
 }
 
-.header-tel{
+.tel-list{
     padding-left: 50px;
 }
 .header-mail, .header-tel{
@@ -179,8 +186,12 @@ text-align: center;
 
 margin: 0 auto;
 max-width: 1600px;
+padding: 200px 452px;
 }
 
+.hero-container{
+    width: auto;
+}
 .hero-tittle{
     color:var(--primary-text-color);
     font-weight: 900;
@@ -190,8 +201,7 @@ max-width: 1600px;
     text-align: center;
     text-transform: uppercase;
 
-    padding-top: 200px;
-    padding-bottom: 40px;
+    
 }
 
 .hero-btn{
@@ -203,9 +213,10 @@ font-size: 16px;
 line-height:1.88;
 
 padding: 10px 32px;
-margin-bottom: 200px;
+margin-top: 30px;
 min-width: 216px;
 text-align: center;
+border: none;
 }
 
 .hero-btn:hover, .hero-btn:focus{
@@ -217,10 +228,12 @@ text-align: center;
 
 .feature-list{
     display: flex;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 .feature-ul{
     display: flex;
-    padding-top: 94px;
+    
 }
 .feature-li{
   max-width: 270px;  
@@ -246,7 +259,7 @@ text-align: center;
 
 /* Work list */
 .work-image{
-    padding-top: 94px;
+    
 }
 
 .list-image{
@@ -269,12 +282,11 @@ text-align: center;
 }
 
 /* Team list */
-.team{
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+
 .team-list{
     background-color:var(--team-bcg-color) ;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 .lists{
     display: flex;
@@ -284,12 +296,16 @@ text-align: center;
     margin-top: 50px;
     margin-left: calc(-1 * var(--card-set-gap));
 }
+.team-worker:first-child{
+    margin-left: 0;
+}
 .team-worker{
     flex-basis: calc(100% / 4 -
     var(--card-set-gap));
     margin-left: var(--card-set-gap);
     background: var(--primary-text-color);
     box-shadow: var(--btn-shadow);
+    border-radius: 0px 0px 4px 4px;
 }
 .team-list .tittle{
     color: var(--tittle-text-color);
@@ -306,7 +322,7 @@ text-align: center;
     font-size: 16px;
     line-height: 1.19;
 
-    margin-top: 30px;
+    padding-top: 30px;
     text-align: center;
 }
 
@@ -317,17 +333,17 @@ text-align: center;
 
     margin-top: 10px;
     text-align: center;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 /* Footer */
 .footer{
     background-color: var(--hero-bcg-color);
 
-    max-width: 1600px;
     display: block;
     margin: 0 auto;
     padding-bottom: 60px;
+    padding-top: 60px;
 }
 .footer .logo-link{
     font-family: 'Raleway', sans-serif;
@@ -338,7 +354,8 @@ text-align: center;
     text-decoration: none;
 
     display: inline-block;
-    margin-top: 60px;
+    margin-bottom: 30px;
+    
 }
 
 .footer .logo{
@@ -347,9 +364,13 @@ text-align: center;
 }
 .footer-address{
     color: var(--primary-text-color);
+
+    padding-bottom: 12px;
 }
 .footer-mail{
-color: rgba(255, 255, 255, 0.6);;
+color: rgba(255, 255, 255, 0.6);
+
+padding-bottom: 12px;
 }
 .footer-tel{
     color: rgba(255, 255, 255, 0.6);
@@ -375,7 +396,7 @@ color: rgba(255, 255, 255, 0.6);;
 }
 
 /* Button site navigation */
-.buttons{
+.examples{
 padding-top: 94px;
 padding-bottom: 94px;
 }
@@ -423,14 +444,16 @@ padding-bottom: 94px;
     
     
     .holder > .portofolio-list{
-        border: 1px solid #EEEEEE;
         margin-left: var(--card-set-gap);
         margin-top: var(--card-set-gap); 
         flex-basis: calc(100% / 3 - var(--card-set-gap));  
     }
 
     .card-content{
-      padding: 24px;  
+      padding: 24px; 
+      border-left: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
     }
     .examples .tittle{
         color: var(--tittle-text-color);
